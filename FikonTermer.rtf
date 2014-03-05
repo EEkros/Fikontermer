@@ -1,0 +1,251 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1053{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\*\generator Riched20 6.2.9200}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang29\par
+Clear case / UCM \par
+\par
+Unified Change Management (UCM) is the object-oriented realization of ClearCase, a set of software tools typically supporting the process area software configuration management.\par
+\par
+UCM is activity based. The activity object is the basis for sharing information between ClearCase and ClearQuest. In ClearQuest, the activity presents itself as a task on the developers \ldblquote to do list\rdblquote  query. In ClearCase, the activity connects the task with the actual files that need to be changed in order to accomplish the task (the change set). A new baseline consists of the old baseline plus all checked-in activities to date. By looking at the change sets of those activities, it is possible to know every file that was touched in order to arrive at a new baseline.\par
+\par
+UCM is also component-based. Units of code that are developed and built together can be kept isolated until time to integrate with the full codeline. Each UCM component can have its own recommended baseline. A set of component baselines can be used to define the fully integrated main product baseline (composite baseline)\par
+\par
+UCM is also project-based. Each codeline can have its own custom set of development policies and can spawn new projects by using its final baseline as a jumping off point for future development.\par
+\par
+UCM is a layer built on Rational ClearCase to provide additional software configuration management features. These changes include integration with ClearQuest to enforce defect and change tracking with code development through the use of activities. This is part of the Rational Unified Process that describes the lifecycle of change management for IBM Rational's software development process. It also gives integrators ownership of projects and streams to allow policy and feature management by project leaders and release engineers. UCM removes the ability/requirement that users manage a configuration specification for a view. UCM is used and configured via either CLIs or GUIs.\par
+SIP\par
+Session Initiation Protocol (SIP) is an application-layer protocol that you can use to initiate, modify, or terminate communication and collaborative sessions over Internet Protocol (IP) networks. It is typically used for instant messaging, telephony, and other real-time collaboration activities. A SIP application is a Java\'99 program that uses at least one servlet that runs on a SIP-enabled application server. The workbench includes tools to help you create and develop SIP applications.\par
+Using the workbench wizards, you can create a project and then add SIP servlets to the project. SIP projects use the Java EE perspective and support the servlet archive (SAR) format.\par
+\par
+SIP 1.0 is defined in the JSR-116 specification and SIP 1.1 is defined in the JSR-289 specification. Both specifications describe the convergence of SIP with Java EE components; SIP 1.0 includes support for providing deployment descriptors, and SIP 1.1 projects can use both deployment descriptors and annotations.\par
+-----------------------------------------------------------------------\par
+\b Diameter \b0\par
+Diameter is an authentication, authorization, and accounting protocol for computer networks. It evolved from and replaces the much less capable RADIUS protocol that preceded it.\par
+\par
+Diameter Applications extend the base protocol by adding new commands and/or attributes, such as those for use of the Extensible Authentication Protocol (EAP).\par
+Comparison with RADIUS[edit]\par
+\par
+The name is a play on words, derived from the RADIUS protocol, which is the predecessor (a diameter is twice the radius). Diameter is not directly backwards compatible but provides an upgrade path for RADIUS. The main features provided by Diameter but lacking in RADIUS are:\par
+\par
+Reliable transport protocols (TCP or SCTP, not UDP)\par
+The IETF is in the process of standardizing TCP Transport for RADIUS\par
+Network or transport layer security (IPsec or TLS)\par
+The IETF is in the process of standardizing Transport Layer Security for RADIUS\par
+Transition support for RADIUS, although Diameter is not fully compatible with RADIUS\par
+Larger address space for attribute-value pairs (AVPs) and identifiers (32 bits instead of 8 bits)\par
+Client\f1\endash server protocol, with exception of supporting some server-initiated messages as well\par
+Both stateful and stateless models can be used\par
+Dynamic discovery of peers (using DNS SRV and NAPTR)\par
+Capability negotiation\par
+Supports application layer acknowledgements, defines failover methods and state machines (RFC 3539)\par
+Error notification\par
+Better roaming support\par
+More easily extended; new commands and attributes can be defined\par
+Aligned on 32-bit boundaries\par
+Basic support for user-sessions and accounting\par
+History[edit]\par
+\par
+The Diameter protocol was initially developed by Pat R. Calhoun, Glen Zorn, and Ping Pan in 1998 to provide a framework for authentication, authorization and accounting (AAA) that could overcome the limitations of RADIUS. RADIUS had issues with reliability, scalability, security and flexibility. RADIUS cannot deal effectively with remote access, IP mobility and policy control. The Diameter protocol defines a policy protocol used by clients to perform policy, AAA, and resource control. This allows a single server to handle policies for many services.[1]\par
+\par
+Like RADIUS, Diameter provides AAA functionality, but, in addition, it is made more reliable by using TCP and SCTP instead of UDP. The Diameter protocol is enhanced further by the development of the 3rd Generation Partnership Project (3GPP) IP Multimedia Subsystem (IMS). The Cx, Dh, Dx, Rf, Ro, and Sh interfaces are supported by Diameter applications.[2] Through the use of extensions, the protocol was designed to be extensible to support proxies, brokers, strong security, mobile IP, network-access servers (NASREQ), accounting and resource management.\par
+\f0\lang1053 ---------------------------------------------\f1\lang29\par
+\f0\par
+\par
+\par
+\par
+\par
+----------------------------------------------\par
+- Netconf \par
+The Network Configuration Protocol (NETCONF), is an IETF network management protocol. It was developed in the NETCONF working group and published in December 2006 as RFC 4741 and later revised in June 2011 and published as RFC 6241. The NETCONF protocol specification is an Internet Standards Track document.\par
+NETCONF provides mechanisms to install, manipulate, and delete the configuration of network devices. Its operations are realized on top of a simple Remote Procedure Call (RPC) layer. The NETCONF protocol uses an Extensible Markup Language (XML) based data encoding for the configuration data as well as the protocol messages. The protocol messages are exchanged on top of a secure transport protocol.\par
+\par
+The NETCONF protocol can be conceptually partitioned into four layers:\par
+\par
+\par
+Basic operations[edit]\par
+The base protocol includes the following protocol operations: <get>, <get-config>, <edit-config>, <copy-config>, <delete-config>, <lock>, <unlock>, <close-session>, <kill-session>.\par
+\par
+Capabilities[edit]\par
+Basic NETCONF functionality can be extended by the definition of NETCONF capabilities. The set of additional protocol features that an implementation supports is communicated between the server and the client during the capability exchange portion of session setup. Mandatory protocol features are not included in the capability exchange since they are assumed. RFC 4741 defines a number of optional capabilities including :xpath and :validate. Note that RFC 6241 obsoletes RFC 4741.\par
+\par
+A capability to support subscribing and receiving asynchronous event notifications is published in RFC 5277. This document defines the <create-subscription> operation, which enables creating real-time and replay subscriptions. Notifications are then sent asynchronously using the <notification> construct. It also defines the :interleave capability, which when supported with the basic :notification capability facilitates the processing of other NETCONF operations while the subscription is active.\par
+\par
+A capability to support partial locking of the running configuration is defined in RFC 5717. This allows multiple sessions to edit non-overlapping sub-trees within the running configuration. Without this capability, the only lock available is for the entire configuration.\par
+\par
+A capability to monitor the NETCONF protocol is defined in RFC 6022. This document contains a data model including information about NETCONF datastores, sessions, locks, and statistics that facilitates the management of a NETCONF server. It also defines methods for NETCONF clients to discover data models supported by a NETCONF server and defines the <get-schema> operation to retrieve them.\par
+\par
+The Content layer consists of configuration data and notification data.\par
+The Operations layer defines a set of base protocol operations to retrieve and edit the configuration data.\par
+The Messages layer provides a mechanism for encoding remote procedure calls (RPCs) and notifications.\par
+The Secure Transport layer provides a secure and reliable transport of messages between a client and a server.\par
+The NETCONF protocol has been implemented in network devices such as routers and switches by some major equipment vendors. One particular strengths of NETCONF is its supports for robust configuration change transactions involving a number of devices.\par
+--------------------------------------------------------\par
+- LDAP \par
+\par
+LDAP anv\'e4nds f\'f6r att utf\'f6ra snabba och effektiva s\'f6kningar p\'e5 katalogservrar. Standarden, som LDAP baseras p\'e5 (X.500), anv\'e4nder OSI-modellen som protokoll-modell medan LDAP anv\'e4nder TCP/IP. Innan LDAP-servrar b\'f6rjade komma, anv\'e4nde LDAP-klienter en LDAP-gateway, som gjorde om LDAP-trafiken till X.500-trafik.[2] Protokollet X.500 har dock f\'f6r\'e4ndrats och kan nu anv\'e4ndas direkt \'f6ver TCP/IP. X.500 anv\'e4nder Directory Access Protocol (DAP) f\'f6r att komma \'e5t X.500-katalogtj\'e4nster. LDAP var till en b\'f6rjan ett l\'e4ttviktigt alternativ f\'f6r att ge \'e5tkomst till X.500-katalogtj\'e4nster, men har p\'e5 senare tid expanderat och blivit lika komplex som X.500.[3]\par
+En klient kopplar upp mot en LDAP-server via TCP-porten 389 (standard). Ett alternativ f\'f6r att f\'e5 s\'e4ker anslutning \'e4r att koppla upp via en SSL-tunnel (port 636). Detta s\'e4tt utfasades i.o.m. att LDAPv2 officiellt gick i pension (2003).[4] Det nya s\'e4ttet \'e4r att anv\'e4nda LDAPv3 Transport Layer Security (TLS) (operationen Start TLS). Klienten skickar f\'f6rfr\'e5gningarna till servern asynkront medan servern skickar sina svar i turordning.\par
+Dessa operationer kan en klient g\'f6ra f\'f6rfr\'e5gningar om:\par
+Start TLS - anv\'e4nder LDAPv3 Transport Layer Security (TLS) f\'f6r en s\'e4ker anslutning\par
+Bind - autentisera och specificera LDAP-protokollversion\par
+Search - s\'f6ka och/eller h\'e4mta katalogposter\par
+Compare - testa om en angiven post inneh\'e5ller ett visst v\'e4rde\par
+Add - l\'e4gg till en ny post\par
+Delete - ta bort en post\par
+Modify - \'e4ndra i en post\par
+Modify Distinguished Name (DN) - flytta eller byt namn p\'e5 en post\par
+Abandon - avbryt en tidigare f\'f6rfr\'e5gan\par
+Extended Operation - generiska operationer anv\'e4nds f\'f6r att definiera andra operationer\par
+Unbind - st\'e4ng ner anslutningen (har inget med 'Bind' att g\'f6ra)\par
+Servern skickar svar p\'e5 dessa f\'f6rfr\'e5gningar men kan ocks\'e5 skicka ett "Unsolicited Notifications". Meddelandet \'e4r inte ett svar p\'e5 en f\'f6rfr\'e5gan utan skickas till exempel innan anslutningen g\'f6r timeout.\par
+\par
+\par
+\par
+Versionshanterings program: \par
+- GIT \par
+\par
+Spr\'e5k: \par
+- Python \par
+\par
+Protokoll: \par
+- Diameter \par
+- Netconf \par
+- LDAP \par
+\par
+Milj\'f6: \par
+- Eclipse \par
+\par
+Metoder: \par
+- Scrum \par
+- Kanban \par
+\par
+\par
+\b\fs32\par
+Front-end och back-end\par
+\b0\fs22 Front-end och back-end \'e4r begrepp som anv\'e4nds inom informationsteknik f\'f6r att beteckna den bearbetning som sker av eller n\'e4ra anv\'e4ndaren (\b anv\'e4ndargr\'e4nssnittsorienterad bearbetning \f1\endash  front-end\b0 ) och sj\f0\'e4lva basbearbetningen (\b ofta p\'e5 serverniv\'e5 \f1\endash  back-end\b0 ).\par
+\par
+I modern datateknik associeras ofta front-end med webbaserade mjukvarumoduler baserade p\f0\'e5 \b HTML, CSS och JavaScript\b0 , d\'e4r utvecklarna av dessa delar kallas webbutvecklare eller webbdesigners.\par
+S\'e4ttet att bygga upp datorsystem \b enligt front-end \b0 och \b back-end \b0 kallas ocks\'e5 \b two-tier architecture.\par
+\b0\par
+\par
+\par
+\b\fs40 Klient\f1\endash server\b0\fs22\par
+Klient-server \f0\'e4r en IT-arkitektur (eller designm\'f6nster) som k\'e4nnetecknas av att olika programvarukomponenter kommunicerar via ett tydligt gr\'e4nssnitt (eller protokoll) d\'e4r den ena komponenten uttryckligen beg\'e4r tj\'e4nster av den andra.\par
+\par
+Klientserverl\'f6sningar \'e4r speciellt vanliga d\'e5 program skall kommunicera \'f6ver datorn\'e4tverk, men anv\'e4nds \'e4ven f\'f6r att h\'e5lla virus borta d\'e5 detta \'e4r ett s\'e4krare alternativ.\par
+\par
+Exempel p\'e5 klient\f1\endash server-system[redigera | redigera wikitext]\par
+\par
+World Wide Web, webbservern \f0\'e4r server, webbl\'e4saren \'e4r klient.\par
+X Window System, grafiksk\'e4rmen \'e4r server, anv\'e4ndarens program \'e4r klient.\par
+E-post, internetleverant\'f6rens e-postserver \'e4r server och e-postprogrammet \'e4r klient.\par
+Se \'e4ven[redigera | redigera wikitext]\par
+\b Webbtj\'e4nst\par
+V\'e4rddator\par
+Klientdator\par
+Klient (datalogi)\par
+\b0\par
+\par
+\b\fs40 IT-arkitektur\b0\fs22\par
+IT-arkitektur \'e4r s\'e4ttet att organisera resurserna och komponenterna i ett datorsystem.\par
+\par
+En arkitektur beskriver ing\'e5ende komponenter och gr\'e4nssnitten mellan dessa. IT arkitekturen kan avse datorsystem i betydelsen IT-infrastruktur d\'e5 komponenterna best\'e5r av olika h\'e5rdvara och gr\'e4nssnitten av kommunikationsprotokoll. IT-arkitektur kan ocks\'e5 avse uppbyggnaden inom en en dator eller ett i ett informationssystem, d\'e5 komponenterna best\'e5r av mjukvarumoduler och gr\'e4nssnitten av standardiserade dataspecifikationer eller kommunikationsprotokoll.\par
+\par
+Se \'e4ven[redigera | redigera wikitext]\par
+\par
+\b Klient server\b0\par
+\b EDI\par
+API\par
+Front-end och back-end ocks\'e5 kallat Two-tier architecure\par
+Tj\'e4nsteorienterad arkitektur\par
+Datorarkitektur\par
+\b0\par
+\par
+\b\fs40 Electronic Data Interchange\b0\fs22\par
+(Omdirigerad fr\'e5n EDI)\par
+Electronic Data Interchange (EDI) \'e4r \'f6verf\'f6ring av strukturerad information enligt ett \'f6verenskommet format. Ben\'e4mningen EDI refererar ofta, men inte alltid, till \'f6verf\'f6ring mellan f\'f6retag av information s\'e5som lagersaldon, kataloginformation, order, orderbekr\'e4ftelse, leveransaviseringar och fakturor.\par
+\par
+EDI relaterar till applikationsintegration d\'e5 det f\'f6rstn\'e4mnda sker mellan tv\'e5 externa parter medan det senare avser att f\'f6rena datasystem och processer internt inom en organisation. Tillsammans brukar de ben\'e4mnas integration.\par
+\par
+Format[redigera | redigera wikitext]\par
+\par
+En del av EDI \'e4r utarbetandet av format att strukturera information i. En vida spridd standard \'e4r EDIFACT som administreras av UN/CEFACT, en del av FN. Numera f\'e5r XML-formatet en allt st\'f6rre till\'e4mpning med standarder som ebXML som \'e4ven den sponsras av UN/CEFACT.\par
+\par
+Inom fordonsindustrin anv\'e4nds huvudsakligen Odette f\'f6r informationsutbyte, vilket \'e4r en variant av EDIFACT, medan organisationen Sveriges kommuner och landsting st\'e5r bakom en annan variant av EDIFACT ben\'e4mnd Single Face to Industry (SFTI). I Nordamerika g\'e4ller dock i stor utstr\'e4ckning ANSI X12-standarden. VDA, Vereinigung des Automobilindustries, \'e4r en tysk standard f\'f6r EDI huvudsakligen anv\'e4nd inom fordonsindustrin.\par
+\par
+Ut\'f6ver standardiserade format som de ovan f\'f6rekommer ocks\'e5 propriet\'e4ra format i form av flatfiler eller vanliga Excel-dokument.\par
+\par
+Processer[redigera | redigera wikitext]\par
+\par
+Vissa av ovanst\'e5ende standarder, d\'e4ribland ebXML och SFTI, inneh\'e5ller inte bara formatbeskrivningar utan \'e4ven en upps\'e4ttning regler f\'f6r hur kommunikationen g\'e5r till. ebXML inneh\'e5ller specificationer inte bara f\'f6r hur data representeras utan ocks\'e5 f\'f6r hur parterna kommer \'f6verens om struktur och metoder och mycket mer. SFTI \'e4r uppbyggt med hj\'e4lp av scenarier som beskriver ett antal typbeteenden mellan akt\'f6rer f\'f6r att p\'e5 s\'e5 s\'e4tt f\'f6renkla utbytet av information.\par
+\par
+\b\fs40 Application Programming Interface\par
+(Omdirigerad fr\'e5n API)\par
+\b0\fs22 Ett API eller Application Programming Interface \'e4r en regelupps\'e4ttning f\'f6r hur en viss programvara kan kommunicera med annan programvara. Regelupps\'e4ttningen beskrivs i princip alltid som en upps\'e4ttning funktionsanrop (API:ets kontrakt) som under ordnade former ger tillg\'e5ng till vissa funktioner. Man s\'e4ger ofta att man kapslar in funktionerna bakom ett API.\par
+\par
+Inneh\'e5ll  [g\'f6m] \par
+1 Definition\par
+2 Olika klasser av API:er\par
+3 Implementation av ett API\par
+4 Generella och specifika API:er\par
+5 V\'e4lk\'e4nda API:er\par
+6 API och Copyright\par
+7 API:ets kontrakt\par
+7.1 Ett exempel p\'e5 kvasiformell beskrivning\par
+8 Ett exempel p\'e5 formell kontraktsbeskrivning i Eiffel\par
+9 Externa l\'e4nkar\par
+10 Referenser\par
+Definition[redigera | redigera wikitext]\par
+\par
+De flesta programvaror i dagens l\'e4ge \'e4r applikationer som knyter samman annan mjukvarufunktion i olika former och skapar en meningsfull helhet, och denna sammanknytning sker med hj\'e4lp av API:er. API:er ger allts\'e5 m\'f6jlighet att p\'e5 ett strukturerat s\'e4tt \'e5teranv\'e4nda redan utvecklad och kvalitetss\'e4krad mjukvara som har kapslats in i n\'e5gon form av kodbibliotek (eng: library). I n\'e5gon mening kan man s\'e4ga att ett API \'e4r de yttre attributen f\'f6r en abstrakt datatyp.\par
+\par
+Ett v\'e4lformat API \'e4r till sin natur lite 'abstrakt' i den meningen att det beskriver en funktion utan att ber\'e4tta n\'e5got om hur denna funktion implementeras (ett API som f\'f6ruts\'e4tter n\'e5got om den underliggande implementationen s\'e4gs vara icke v\'e4lformat).\par
+\par
+Olika klasser av API:er[redigera | redigera wikitext]\par
+\par
+Man kan s\'e4rskilja tv\'e5 olika typer av API:er:\par
+\par
+API:er som ger tillg\'e5ng till olika typer av systemresurser, ofta utan att f\'e4sta avseende vid vilket operativsystem programmet ska anv\'e4ndas p\'e5. Exempel:\par
+Skrivare\par
+Filhantering\par
+Grafikhantering\par
+Radiokretsar (exempelvis WLAN eller Bluetooth)\par
+I detta fall talar man om drivrutins-API:er. API:et anv\'e4nds som ett lager mellan h\'f6gniv\'e5programmering och l\'e5gniv\'e5resurser (systemresurser).\par
+API:er som ger tillg\'e5ng till h\'f6gniv\'e5funktioner som \'e5teranv\'e4nds p\'e5 ett eller annat s\'e4tt. H\'e4r r\'f6r det sig ofta om mjukvara som tillhandah\'e5lls av andra leverant\'f6rer f\'f6r olika typer av datahantering eller ber\'e4kningar. Exempel:\par
+Matrisber\'e4kningsbibliotek\par
+API:er f\'f6r att skicka e-post\par
+I detta fall talar man ofta om kommersiella API:er eller h\'f6gniv\'e5-API:er.\par
+Implementation av ett API[redigera | redigera wikitext]\par
+\par
+Den programkod som utf\'f6r det API:et \'e4r t\'e4nkt att utf\'f6ra f\'f6r kallas API:ets implementation. Det existerar ofta ett flertal implementationer f\'f6r ett visst API, exempelvis f\'f6r olika operativsystem s\'e5som Windows, olika UNIX-dialekter och MacOS. (MacOS X \'e4r i sj\'e4lva verket ocks\'e5 en UNIX-dialekt.) Ett API kan implementeras i snart sagt vilket programspr\'e5k som helst i vilken operativsystemsmilj\'f6 som helst, s\'e5 l\'e4nge som det \'e4r m\'f6jligt f\'f6r en programmerare att anv\'e4nda det.\par
+\par
+Generella och specifika API:er[redigera | redigera wikitext]\par
+\par
+Man skiljer ocks\'e5 p\'e5 generella och specifika API:er.\par
+\par
+Ett generellt API beskriver ett generellt s\'e4tt att anv\'e4nda en viss systemresurs eller annan resurs. Exempel \'e4r printer-API:er och grafik-API:er s\'e5som OpenGL. Denna typ av API:er till\'e5ter en mjukvaruutvecklare att skapa en programvara som \'e4r v\'e4ldigt flexibel och som kan flyttas mellan olika h\'e5rdvaruarkitekturer och operativsystem utan att \'e4ndras.\par
+Ett specifikt API ger tillg\'e5ng till en specifik resurs, ofta en h\'e5rdvaruresurs s\'e5som ett specialiserat GPS-chip eller liknande. Denna typ av API:er \'e4r vanliga p\'e5 mer specialiserade h\'e5rdvaruarkitekturer.\par
+V\'e4lk\'e4nda API:er[redigera | redigera wikitext]\par
+\par
+API:er som de flesta av oss kommer i kontakt med p\'e5 ett eller annat s\'e4tt, exempelvis n\'e4r vi installerar ett nytt program p\'e5 v\'e5r dator, \'e4r\par
+\par
+DirectX - f\'f6r 3D-grafik\par
+GTK+ - f\'f6r anv\'e4ndargr\'e4nssnitt\par
+OpenGL - f\'f6r 3D-grafik\par
+Win32 - f\'f6r applikationsprogrammering p\'e5 Windows\par
+ODBC - f\'f6r databaser\par
+API och Copyright[redigera | redigera wikitext]\par
+\par
+2010 st\'e4mde Oracle Google f\'f6r att de hade implementerat Javakod i androids operativsystem och sedan distribuerat det. Google hade inte f\'e5tt till\'e5telse att \'e5teranv\'e4nda Java API. Google vann tvisten d\'e4rf\'f6r att i USA s\'e5 f\'e5r man inte ha copyright p\'e5 API:er. [1]\par
+\par
+API:ets kontrakt[redigera | redigera wikitext]\par
+\par
+Termen kontrakt anv\'e4nds ibland som en ben\'e4mning p\'e5 en kvasiformell beskrivning p\'e5 hur, och vilka villkor som ska vara uppfyllda, f\'f6r att ett API eller en API-funktion ska anropas. Termen kontrakt anv\'e4nds ocks\'e5 mer formellt i den engelska termen "Design by Contract" (DbC) och avser d\'e5 en formell specifikation av ett API eller en API funktion som ocks\'e5 utg\'f6r en faktisk del av k\'e4llkoden. S\'e5dana kontrakt m\'f6jligg\'f6r s\'e5ledes kontroll av villkor n\'e4r anrop till ett API eller API-funktion faktiskt g\'f6rs. DbC har oftast implementerats i objektorienterade programmeringsspr\'e5k.\par
+\par
+DbC utvecklades av Bertrand Meyer och har sitt teoretiska ursprung i Tony Hoares Hoare-logik och Jean-Raymond Abrials arbete med Z-notation. "Design by Contract" implementerades f\'f6rst i programmeringsspr\'e5ket Eiffel och beskrevs f\'f6rst 1986. St\'f6d f\'f6r DbC finns idag i flera programmeringsspr\'e5k, d\'e4ribland Ada 2012 och D. Att anv\'e4nda DbC kallas ibland f\'f6r kontraktsprogrammering.\par
+\par
+\b\fs40 Tj\'e4nsteorienterad arkitektur\b0\fs22\par
+Tj\'e4nsteorienterad arkitektur (service oriented architecture, SOA) inneb\'e4r att ett distribuerat IT-system organiseras som en struktur av kommunicerande tj\'e4nster. En tj\'e4nst \'e4r h\'e4r en betj\'e4nande funktion som \'e4r v\'e4ldefinierad, sj\'e4lvst\'e4ndig och oberoende av sin omgivning. Kommunikationen kan inneb\'e4ra ett enkelt godk\'e4nnande av data eller involvera tv\'e5 eller flera tj\'e4nster som samordnar en aktivitet. I ett system uppbyggt enligt SOA \'e4r resurser tillg\'e4ngliga f\'f6r andra system inom ett n\'e4tverk som oberoende tj\'e4nster, och kan anropas och adresseras p\'e5 ett standardiserat s\'e4tt. Syftet med SOA \'e4r att uppfylla de aff\'e4rsm\'e4ssiga kraven p\'e5 ett IT-system. En av styrkorna med SOA \'e4r att den mer \'e4n andra tekniker uppmuntrar till att \'e5teranv\'e4nda redan befintliga tj\'e4nster/system.\par
+\par
+SOA f\'f6rknippas ofta med webbtj\'e4nster baserade p\'e5 XML, SOAP, WSDL och UDDI, men \'e4r i princip inte begr\'e4nsad till endast dessa tekniker.\par
+\par
+}
+ 
